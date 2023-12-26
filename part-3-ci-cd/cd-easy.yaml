@@ -20,5 +20,3 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > keyfile
         chmod 600 keyfile
         ssh -t -i keyfile ubuntu@ec2-url "sudo bash ~/deploy.sh"
-
-
