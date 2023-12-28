@@ -15,8 +15,8 @@ jobs:
       with:
         node-version: 20.10.0
 
-    - name: Install Yarn
-      run: npm install -g yarn
+    - name: Install pm2
+      run: npm install -g pm2
 
     - name: SSH and deploy
       env:
