@@ -6,5 +6,3 @@ git pull origin master
 cd server
 pm2 kill
 pm2 start index.js
-
-
