@@ -19,7 +19,6 @@ jobs:
     - name: SSH and deploy
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        PATH: /home/runner/work/github-cicd/github-cicd/node_modules/.bin:$PATH
       shell: bash
       run: |
         echo "$SSH_PRIVATE_KEY" > keyfile
