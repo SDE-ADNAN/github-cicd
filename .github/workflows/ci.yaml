@@ -19,9 +19,7 @@ jobs:
         PATH: /home/runner/work/github-cicd/github-cicd/node_modules/.bin:$PATH
       run: |
         echo "$SSH_PRIVATE_KEY" > keyfile
-        chmod 600 keyfile
+        exec 0600< keyfile
         mkdir -p ~/.ssh
         cp known_hosts ~/.ssh/known_hosts
-        ssh -t -i keyfile ubuntu@ec2-13-53-207-20.eu-north-1.compute.amazonaws.com "sudo bash ~/deploy.sh"
-
-
+        ssh -i keyfile ubuntu@ec2-13-53-207-20.eu-north-1.compute.amazonaws.com "sudo bash ~/deploy.sh"
